@@ -713,6 +713,12 @@ bool GCS_MAVLINK::try_send_message(enum ap_message id)
     	CHECK_PAYLOAD_SIZE(ENCAPSULATED_DATA);
     	copter.gcs[chan-MAVLINK_COMM_0].send_encapsulated_data();
     	break;
+/*
+    case MSG_SEND_IMAGE:	//hualiang
+    	CHECK_PAYLOAD_SIZE(ENCAPSULATED_DATA);
+    	copter.gcs[chan-MAVLINK_COMM_0].send_image();
+    	break;
+*/
 
     case MSG_STATUSTEXT:
         CHECK_PAYLOAD_SIZE(STATUSTEXT);
