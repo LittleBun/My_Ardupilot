@@ -1378,7 +1378,7 @@ void GCS_MAVLINK::send_data_transmission_handshake() const
 
 	uint8_t packets_count = 2;
 	mavlink_data_transmission_handshake_t packet_in = {
-				MAVLINK_DATA_STREAM_IMG_JPEG,263,17547,17651,packets_count,253,41
+				263,17547,17651,packets_count,MAVLINK_DATA_STREAM_IMG_JPEG, 253,41
 			    };
 
 	//to be figured out
@@ -1398,8 +1398,7 @@ void GCS_MAVLINK::send_data_transmission_handshake() const
         height,
         packets,
         payload,
-        jpg_quality,
-        0
+        jpg_quality
         );
 }
 
